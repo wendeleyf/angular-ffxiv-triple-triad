@@ -1,0 +1,21 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Nome</th>
+			<th scope="col">Raridade</th>
+			<th scope="col">Patch</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let card of cardList">
+			<th scope="row">{{card.id}}</th>
+			<td>
+				<img src="{{card.icon}}" alt="">
+				{{card.name}}
+			</td>
+			<td>{{card.stars}}</td>
+			<td>{{card.patch}}</td>
+		</tr>
+	</tbody>
+</table>

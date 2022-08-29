@@ -1,14 +1,32 @@
-<table mat-table [dataSource]="cardList" class="mat-elevation-z8 card-table">
-	
+<table mat-table [dataSource]="cardList" class="mat-elevation-z8 card-table text-center">
 	<ng-container matColumnDef="id">
 		<th mat-header-cell *matHeaderCellDef class="text-center">#</th>
 		<td mat-cell *matCellDef="let card" class="text-center">{{card.id}}</td>
 	</ng-container>
 	
-	<ng-container matColumnDef="name">
-		<th mat-header-cell *matHeaderCellDef>Nome</th>
-		<td mat-cell *matCellDef="let card">
+	<ng-container matColumnDef="icon">
+		<th mat-header-cell *matHeaderCellDef class="text-center">Ícone</th>
+		<td mat-cell *matCellDef="let card" class="text-center">
 			<img src="{{card.icon}}" />
+		</td>
+	</ng-container>
+
+	<ng-container matColumnDef="rarity">
+		<th mat-header-cell *matHeaderCellDef class="text-center">Raridade</th>
+		<td mat-cell *matCellDef="let card" class="text-center">
+			<div [ngSwitch]="card.stars">
+				<img *ngSwitchCase="1" src="{{rarities.rarity1}}"/>
+				<img *ngSwitchCase="2" src="{{rarities.rarity2}}"/>
+				<img *ngSwitchCase="3" src="{{rarities.rarity3}}"/>
+				<img *ngSwitchCase="4" src="{{rarities.rarity4}}"/>
+				<img *ngSwitchCase="5" src="{{rarities.rarity5}}"/>
+			</div>
+		</td>
+	</ng-container>
+
+	<ng-container matColumnDef="name">
+		<th mat-header-cell *matHeaderCellDef class="text-center">Nome</th>
+		<td mat-cell *matCellDef="let card" class="text-center">
 			{{card.name}}
 		</td>
 	</ng-container>
@@ -25,14 +43,9 @@
 		</td>
 	</ng-container>
 
-	<ng-container matColumnDef="rarity">
-		<th mat-header-cell *matHeaderCellDef class="text-center">Raridade</th>
-		<td mat-cell *matCellDef="let card" class="text-center">{{card.stars}}</td>
-	</ng-container>
-
 	<ng-container matColumnDef="source">
-		<th mat-header-cell *matHeaderCellDef>Como adquirir</th>
-		<td mat-cell *matCellDef="let card">
+		<th mat-header-cell *matHeaderCellDef class="text-center">Como adquirir</th>
+		<td mat-cell *matCellDef="let card" class="text-center">
 			<ul *ngIf="card.sources.drops" class="list-none p-0 m-0">
 				<li *ngFor="let drop of card.sources.drops">
 					<img src="assets/img/battle_b.png" class="w-14"/>

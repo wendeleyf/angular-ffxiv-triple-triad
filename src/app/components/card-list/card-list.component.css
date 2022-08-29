@@ -22,3 +22,7 @@
 .w-14{
 	width:14px;
 }
+
+.mat-column-status{
+	width:8% !important;
+}

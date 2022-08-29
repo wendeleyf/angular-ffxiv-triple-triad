@@ -8,7 +8,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

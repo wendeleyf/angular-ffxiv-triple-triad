@@ -30,6 +30,28 @@
 		<td mat-cell *matCellDef="let card" class="text-center">{{card.stars}}</td>
 	</ng-container>
 
+	<ng-container matColumnDef="source">
+		<th mat-header-cell *matHeaderCellDef>Como adquirir</th>
+		<td mat-cell *matCellDef="let card">
+			<ul *ngIf="card.sources.drops" class="list-none p-0 m-0">
+				<li *ngFor="let drop of card.sources.drops">
+					<img src="assets/img/battle_b.png" class="w-14"/>
+					{{drop}}
+				</li>
+			</ul>
+			<ul *ngIf="card.sources.npcs" class="list-none p-0 m-0">
+				<li *ngFor="let npc of card.sources.npcs">
+					<img src="assets/img/npc_b.png" class="w-14" />
+					{{npc.name}}
+				</li> 
+			</ul>
+			<p *ngIf="card.sources.packs">{{card.sources.packs.name}}</p>
+			<div *ngIf="card.sources.purchase" class="p-0 m-0">
+				<span>Pode ser comprado por {{card.sources.purchase}}</span> <img src="assets/img/mgp.png" class="w-14"/>
+			</div>
+		</td>
+	</ng-container>
+
 	<ng-container matColumnDef="patch">
 		<th mat-header-cell *matHeaderCellDef>Patch</th>
 		<td mat-cell *matCellDef="let card">{{card.patch}}</td>

@@ -10,6 +10,7 @@ import { Constants } from 'src/app/config/constants';
 export class CardListComponent implements OnInit {
   
   cardList:any = [];
+  displayedColumns: string[] = ['id', 'name', 'rarity', 'patch'];
 
   constructor(private http: HttpClient) { }
   

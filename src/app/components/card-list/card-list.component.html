@@ -1,21 +1,29 @@
-<table class="table">
-	<thead>
-		<tr>
-			<th scope="col">#</th>
-			<th scope="col">Nome</th>
-			<th scope="col">Raridade</th>
-			<th scope="col">Patch</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr *ngFor="let card of cardList">
-			<th scope="row">{{card.id}}</th>
-			<td>
-				<img src="{{card.icon}}" alt="">
-				{{card.name}}
-			</td>
-			<td>{{card.stars}}</td>
-			<td>{{card.patch}}</td>
-		</tr>
-	</tbody>
+<table mat-table [dataSource]="cardList" class="mat-elevation-z8 card-table">
+	
+	<ng-container matColumnDef="id">
+		<th mat-header-cell *matHeaderCellDef>#</th>
+		<td mat-cell *matCellDef="let card">{{card.id}}</td>
+	</ng-container>
+	
+	<ng-container matColumnDef="name">
+		<th mat-header-cell *matHeaderCellDef>Nome</th>
+		<td mat-cell *matCellDef="let card">
+			<img src="{{card.icon}}" />
+			{{card.name}}
+		</td>
+	</ng-container>
+
+	<ng-container matColumnDef="rarity">
+		<th mat-header-cell *matHeaderCellDef>Raridade</th>
+		<td mat-cell *matCellDef="let card">{{card.stars}}</td>
+	</ng-container>
+
+	<ng-container matColumnDef="patch">
+		<th mat-header-cell *matHeaderCellDef>Patch</th>
+		<td mat-cell *matCellDef="let card">{{card.patch}}</td>
+	</ng-container>
+	
+	<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
 </table>

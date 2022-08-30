@@ -10,13 +10,15 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { InterceptorService } from './services/interceptor.service';
+import { HomeComponent } from './layout/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavbarComponent,
-    CardListComponent
+    CardListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

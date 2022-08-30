@@ -26,3 +26,8 @@
 .mat-column-status{
 	width:8% !important;
 }
+
+.mat-row:hover .mat-cell{
+	cursor:pointer;
+	background-color:#3f474e;
+}

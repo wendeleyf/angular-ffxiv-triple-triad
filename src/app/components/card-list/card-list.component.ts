@@ -22,6 +22,10 @@ export class CardListComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
   
+  rowClick(row: any){
+    console.log(row);
+  }
+
   ngOnInit(): void {
     this.http.get(Constants.API_CARD_LIST_TRIAD)
       .subscribe((resultado:any) => {

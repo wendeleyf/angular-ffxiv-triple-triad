@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Constants } from 'src/app/config/constants';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-card-list',
@@ -20,10 +22,16 @@ export class CardListComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'icon','rarity', 'name', 'status', 'source', 'patch'];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public dialog: MatDialog) { }
   
   rowClick(row: any){
-    console.log(row);
+    let dialogRef = this.dialog.open(
+      CardComponent, 
+      {
+        width:'50%',
+        data: row
+      }
+    )
   }
 
   ngOnInit(): void {

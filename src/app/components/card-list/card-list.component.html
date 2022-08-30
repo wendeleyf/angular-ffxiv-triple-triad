@@ -58,10 +58,16 @@
 					{{npc.name}}
 				</li> 
 			</ul>
-			<p *ngIf="card.sources.packs">{{card.sources.packs.name}}</p>
+			<ul *ngIf="card.sources.packs" class="list-none p-0 m-0">
+				<li *ngFor="let pack of card.sources.packs">
+					<img src="assets/img/triad_b.png" class="w-14" />
+					{{pack.name}}
+				</li>
+			</ul>
 			<div *ngIf="card.sources.purchase" class="p-0 m-0">
 				<span>Pode ser comprado por {{card.sources.purchase}}</span> <img src="assets/img/mgp.png" class="w-14"/>
 			</div>
+			
 		</td>
 	</ng-container>
 

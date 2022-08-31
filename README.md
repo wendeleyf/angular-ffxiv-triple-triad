@@ -1,27 +1,46 @@
-# NgTripleTriad
+# Angular - Triple Triad Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Repositório contendo o projeto do Triple Triad Tracker, consumindo uma API para rastreio de cartas obtidas no jogo
+FFXIV.
 
-## Development server
+## 💻 Tecnologias Utilizadas (Frontend)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Framework Angular
+* Angular Material
+* Bootstrap 5
 
-## Code scaffolding
+## 🚀 Funcionalidades Implementadas (WIP)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Componente com a listagem de cartas existentes no jogo, assim como também informações sobre elas;
+* Modal ao clicar na lista de carta para exibir mais informações;
+* Loader Service ao carregar recursos da API utilizando Interceptors.
 
-## Build
+## 🚀 Funcionalidades para Implementar (WIP)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Seção Home com estatísticas;
+* Seção de NPCS;
+* Seção de Decks;
+* Integração com o backend para salvar dados do usuário e quais cartas ele obteve;
+* Sistema de Login com AuthGuard em seções específicas;
+* Paginação da Datatable;
+* Filtro da Datatable.
 
-## Running unit tests
+## 🔨 Ferramentas Utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* [**Visual Studio Code**](https://code.visualstudio.com/)
+* [**Angular 13**](https://angular.io/)
+* [**npm**](https://www.npmjs.com/)
+* [**CMDER 210912**](https://cmder.net/)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🌎 Aplicação (WIP)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+<br>
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" width="300"/>
+</div>
+
+<h3 align="center"> ⚠ README em Construção! </h3>
+
